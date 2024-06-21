@@ -4,5 +4,5 @@ Integrantes:
 João Barros Guatura da Costa - 22013545-2
 Rafael Souza Osadzuk - 22137934-2
 Raffael Guidetti Mielo -
-Vinicius Kawasugui Santiago -
+Vinicius Kawasugui Santiago - 22086055-2
 Leonardo Pedrozo -

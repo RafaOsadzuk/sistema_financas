@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+</head>
+<body>
+    <header>
+        <h1>Adicionar Nova Receita Financeira</h1>
+    </header>
+
+    <form id="formReceita" action="add_receita.php" method="POST">
+        <label for="id">ID da Receita</label>
+        <input type="text" id="id" name="id" required>
+
+        <label for="valor">Valor</label>
+        <input type="number" id="valor" name="valor" step="0.01" required>
+
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="descricao">Descrição (opcional)</label>
+        <textarea id="descricao" name="descricao" rows="4"></textarea>
+
+        <label for="categoria">Caregoria</label>
+        <input type="text" id="categoria" name="categoria" required>
+
+        <button type="submit">Adicionar Receita</button>
+    </form>
+
+    <script>
+        document.getElementById('formReceita').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+  
+            const receitaId = document.getElementById('id').value;
+            const valor = document.getElementById('valor').value;
+            const data = document.getElementById('data').value;
+            const descricao = document.getElementById('descricao').value;
+            const categoria = document.getElementById('categoria').value;
+
+         
+            const novaReceita = {
+                id: id,
+                valor: parseFloat(valor),
+                data: data,
+                descricao: descricao,
+                categoria: categoria
+            };
+
+           
+            console.log('Nova Receita Adicionada:', novaReceita);
+
+     
+            document.getElementById('formReceita').reset();
+            
+        
+            alert('Receita adicionada com sucesso!');
+        });
+    </script>
+    
+</body>
+</html>

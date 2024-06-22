@@ -28,8 +28,14 @@
 
     </header>
 
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
     <div class="button-container">
-        <div class="button" onclick="alert('Botão 1 clicado!')">Depositar</div>
+        <div class="button" onclick="navigateTo('receitas.html')">Receitas</div>
         <div class="button" onclick="alert('Botão 2 clicado!')">Despesas</div>
         <div class="button" onclick="alert('Botão 3 clicado!')">Editar</div>
     </div>

@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $conn = new PDO('sqlite:' . DB_PATH);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Conexão com o banco de dados SQLite estabelecida com sucesso.<br>";
 
 
         $stmt = $conn->prepare("INSERT INTO receitas (id, valor, data, descricao, categoria) VALUES (:id, :valor, :data, :descricao, :categoria)");
@@ -27,6 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             echo "Nova receita financeira adicionada com sucesso!";
+            echo "Nova receita financeira adicionada com sucesso!<br>";
+            echo "Dados inseridos:<br>";
+            echo "Id: $id<br>";
+            echo "Valor: $valor<br>";
+            echo "Data: $data<br>";
+            echo "Descrição: $descricao<br>";
+            echo "Categoria: $categoria<br>";
         } else {
             echo "Erro: Não foi possível adicionar a receita.";
         }

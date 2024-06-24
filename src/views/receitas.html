@@ -10,7 +10,7 @@
         <h1>Adicionar Nova Receita Financeira</h1>
     </header>
 
-    <form id="formReceita" action="add_receita.php" method="POST">
+    <form id="formReceita" action="/controllers/app2.php" method="POST">
         <label for="id">ID da Receita</label>
         <input type="text" id="id" name="id" required>
 
@@ -28,37 +28,6 @@
 
         <button type="submit">Adicionar Receita</button>
     </form>
-
-    <script>
-        document.getElementById('formReceita').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-  
-            const receitaId = document.getElementById('id').value;
-            const valor = document.getElementById('valor').value;
-            const data = document.getElementById('data').value;
-            const descricao = document.getElementById('descricao').value;
-            const categoria = document.getElementById('categoria').value;
-
-         
-            const novaReceita = {
-                id: id,
-                valor: parseFloat(valor),
-                data: data,
-                descricao: descricao,
-                categoria: categoria
-            };
-
-           
-            console.log('Nova Receita Adicionada:', novaReceita);
-
-     
-            document.getElementById('formReceita').reset();
-            
-        
-            alert('Receita adicionada com sucesso!');
-        });
-    </script>
     
 </body>
 </html>

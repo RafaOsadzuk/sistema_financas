@@ -1,2 +1,2 @@
 <?php
-define('DB_PATH', 'financas.db');
+define('DB_PATH', '/database/financas.db');

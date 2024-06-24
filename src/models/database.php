@@ -6,18 +6,21 @@ class Database
 
     private function __construct()
     {
-        if (is_null(self::$conn)) {
-            self::$conn = new PDO(dsn: 'sqlite:src\database\financas.db', options:[
-                PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,   
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]);
-        }
+
     }
 
     public static function getConn()
     {
         if (is_null(self::$conn)) {
-            new self;
+            try {
+                self::$conn = new PDO('sqlite:' . __DIR__ . '/../database/financas.db', null, null, [
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                ]);
+                echo "Conexão bem-sucedida";
+            } catch (PDOException $e) {
+                die("Erro na conexão: " . $e->getMessage());
+            }
         }
         return self::$conn;
     }

@@ -1,10 +1,10 @@
 <?php
 
-require_once __DIR__ . '/src/models/Database.php';
-require_once __DIR__ . '/src/controllers/Receita.php';
-require_once __DIR__ . 'src\controllers\Despesa.php';
-require_once __DIR__ . 'src\controllers\Saldo.php';
-require_once __DIR__ . 'src\models\SaldoModel.php';
+require_once __DIR__ . '/../models/Database.php';
+require_once __DIR__ . '/Receita.php';
+require_once __DIR__ . '/Despesa.php';
+require_once __DIR__ . '/Saldo.php';
+require_once __DIR__ . '/../models/SaldoModel.php';
 
 /*
 if (isset($_POST['saldo'])) {

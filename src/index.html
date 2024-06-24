@@ -33,16 +33,20 @@
 
     </header>
 
-    <script>
-        function navigateTo(page) {
-            window.location.href = page;
-        }
-    </script>
+    
 
     <div class="button-container">
-        <div class="button" onclick="navigateTo('receitas.html')">Receitas</div>
-        <div class="button" onclick="alert('Botão 2 clicado!')">Despesas</div>
-        <div class="button" onclick="alert('Botão 3 clicado!')">Editar</div>
+        <a href="/views/receitas.html">
+            <div class="button" >Receitas</div>
+        </a>
+
+        <a href="/views/despesas.html">
+            <div class="button" >Despesas</div>
+        </a>
+
+        <a href="">
+            <div class="button" >Editar</div>
+        </a>
     </div>
 
     <script src="/public/app.js"></script>

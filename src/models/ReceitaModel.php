@@ -24,7 +24,6 @@ class ReceitaModel
         return $stmt->execute();
     }
 
-
     public static function getUltimoUsuario()
     {        
         $stmt = Database::getConn()->prepare('SELECT * FROM usuarios ORDER BY id DESC;');

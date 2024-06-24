@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Despesas</title>
 </head>
 <body>
+    <header>
+        <h1>Adicione uma despesa:</h1>
+    </header>
+
+    <form action="/controllers/adicionaDespesa.php" method="post">
+        <label for="valor">Valor</label>
+        <input type="number" id="valor" name="valor" step="0.01" required>
+
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="descricao">Descrição (opcional)</label>
+        <textarea id="descricao" name="descricao" rows="4"></textarea>
+
+        <label for="categoria">Caregoria</label>
+        <input type="text" id="categoria" name="categoria" required>
+
+        <input type="submit" value="Adicionar despesa">
+    </form>
     
 </body>
 </html>

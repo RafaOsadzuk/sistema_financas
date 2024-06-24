@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,28 @@
     <link rel="icon" href="/public/images/Logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="/public/style.css">
 </head>
+
 <body>
     <header>
-        <div class="dadosContainer">
-            <img  src="/public/images/LogoHeader.png" alt="Logo">
+        <form action="app.php" method="post">
+            <div class="dadosContainer">
+                <img src="/public/images/LogoHeader.png" alt="Logo">
 
-            <div class="dadosContent">
-                <p>Nome: ADMIN</p>
-                <br>
+                <div class="dadosContent">
+                    <p>Nome: ADMIN</p>
+                    <br>
 
-                <div id="saldoContainer">
-                    <span id="saldoText">Saldo: 
-                        <button id="saldoInput">cadastrar Saldo</button>
-                    </span>
+                    <div id="saldoContainer">
+                        <span id="saldoText">Saldo:
+                            <button id="saldoInput">cadastrar Saldo</button>
+                        </span>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+        </form>
 
     </header>
 
@@ -45,4 +50,5 @@
     </div>
 
     <script src="/public/app.js"></script>
+
 </html>

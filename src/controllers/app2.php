@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__ . '/src/controllers/Despesa.php';
-require_once __DIR__ . '/src/controllers/Receita.php';
-require_once __DIR__ . '/src/controllers/Saldo.php';
-require_once __DIR__ . '/src/models/ReceitaModel.php';
-require_once __DIR__ . '/src/models/Database.php';
-require_once __DIR__ . '/src/models/SaldoModel.php';
+require_once __DIR__ . '/Despesas.php';
+require_once __DIR__ . '/Receitas.php';
+require_once __DIR__ . '/Saldo.php';
+require_once __DIR__ . '/../models/ReceitaModel.php';
+require_once __DIR__ . '/../models/Database.php';
+require_once __DIR__ . '/../models/SaldoModel.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -41,14 +41,13 @@ $template = str_replace(
     ],
     $template);
 
-
-// salvar um usuario no DB
-$receitaModelo = new ReceitaModel($receitas);
-if ($receitaModelo->save()) {
-    $ultimoUsuarioId = $receitaModelo->getUltimoUsuario()['id'];
-} else {
-    echo "Erro ao salvar receita";
-}
-
-echo $template;
+    $database = Database::getConn(); 
+    $receitaModelo = new ReceitaModel($database, $receitas);
+    if ($receitaModelo->save()) {
+        echo "Receita salva com sucesso!";
+    } else {
+        echo "Erro ao salvar receita";
+    }
+    
+    echo $template;
 }

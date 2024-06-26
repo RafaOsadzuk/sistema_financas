@@ -1,3 +1,4 @@
+// criar input para adicionar saldo do usuario
 const saldoText = document.getElementById('saldoText');
 const saldoInput = document.getElementById('saldoInput');
 
@@ -57,3 +58,35 @@ function adicionarSaldo(saldo) {
         saldoText.appendChild(novoBotao);
     });
 }
+
+
+//adiciona receita em uma tabela
+
+document.getElementById('formReceita').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+
+    const receitaId = document.getElementById('id').value;
+    const valor = document.getElementById('valor').value;
+    const data = document.getElementById('data').value;
+    const descricao = document.getElementById('descricao').value;
+    const categoria = document.getElementById('categoria').value;
+
+ 
+    const novaReceita = {
+        id: id,
+        valor: parseFloat(valor),
+        data: data,
+        descricao: descricao,
+        categoria: categoria
+    };
+
+   
+    console.log('Nova Receita Adicionada:', novaReceita);
+
+
+    document.getElementById('formReceita').reset();
+    
+
+    alert('Receita adicionada com sucesso!');
+});

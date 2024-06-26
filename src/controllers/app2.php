@@ -19,10 +19,10 @@ $receitas = new Receitas( (int)$_POST['id'],
 
 
 
-// 1) ler o template de resposta
+
 $template = file_get_contents(__DIR__ . '/src/views/receitas.html');
 
-// 2) trocar cada valor estatico pelo valor do script
+
 $template = str_replace(
     [
         '{{ID}}',

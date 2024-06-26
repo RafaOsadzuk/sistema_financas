@@ -10,7 +10,7 @@ class SaldoModel{
 
     public function save()
     {
-        $stmt = Database::getConn()->prepare('INSERT INTO saldoUsuario (saldo) VALUE (:saldo);');
+        $stmt = Database::getConn()->prepare('INSERT INTO saldo (saldo) VALUES (:saldo);');
         
         $stmt->bindParam('saldo', $this->saldo->getSaldo());
 

@@ -12,13 +12,13 @@ class Database
     {
         if (is_null(self::$conn)) {
             try {
-                $dbPath = __DIR__. '/../database/financas.db';
-                self::$conn = new PDO('sqlite:'. $dbPath, null, null, [
+                self::$conn = new PDO('sqlite:' . __DIR__ . '/../database/financas.db', null, null, [
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
                 ]);
+                echo "Conexão bem-sucedida";
             } catch (PDOException $e) {
-                throw new RuntimeException("Erro na conexão: ". $e->getMessage(), 0, $e);
+                die("Erro na conexão: " . $e->getMessage());
             }
         }
         return self::$conn;

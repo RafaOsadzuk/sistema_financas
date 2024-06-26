@@ -1,16 +1,11 @@
 <?php
-
 require 'db_config.php';
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
     $id = $_POST['id'];
     $valor = $_POST['valor'];
     $data = $_POST['data'];
     $descricao = $_POST['descricao'];
     $categoria = $_POST['categoria'];
-
     try {
 
         $conn = new PDO('sqlite:' . DB_PATH);
@@ -24,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':data', $data);
         $stmt->bindParam(':descricao', $descricao);
         $stmt->bindParam(':categoria', $categoria);
-
 
         if ($stmt->execute()) {
             echo "Nova receita financeira adicionada com sucesso!";

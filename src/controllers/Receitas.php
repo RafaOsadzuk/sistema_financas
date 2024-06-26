@@ -10,23 +10,21 @@ class Receitas
 
     public function __construct(int $id, 
                                 float $valor, 
-                                 DateTimeInterface $data,
-                                 string $descricao, 
-                                 string $categoria)
+                                DateTimeInterface $data,
+                                string $descricao, 
+                                string $categoria)
     {
         $this->id = $id;
         $this->valor = $valor;
         $this->data = $data;
         $this->descricao = $descricao;
         $this->categoria = $categoria;
-    }   
+    }
 
-
-    public function getId(): string
+    public function getId(): int
     {
         return $this->id;
     }
-
 
     public function getValor(): float
     {
@@ -38,7 +36,6 @@ class Receitas
         return $this->data;
     }
 
-
     public function getDescricao(): string
     {
         return $this->descricao;
@@ -48,5 +45,4 @@ class Receitas
     {
         return $this->categoria;
     }
-
 }

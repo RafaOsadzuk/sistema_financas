@@ -4,29 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas</title>
-    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
     <header>
-        <div class="dadosContainer">
-            <img src="/public/images/LogoHeader.png" alt="Logo">
-
-            <div class="dadosContent">
-                <p>Nome: ADMIN</p>
-                <br>
-
-                <div id="saldoContainer">
-                    <span id="saldoText">Saldo:
-                        <button id="saldoInput">cadastrar Saldo</button>
-                    </span>
-                </div>
-
-            </div>
-
-        </div>
-
         <h1>Adicionar Nova Receita Financeira</h1>
-
     </header>
 
     <form id="formReceita" action="/controllers/app2.php" method="POST">
@@ -42,14 +23,10 @@
         <label for="descricao">Descrição (opcional)</label>
         <textarea id="descricao" name="descricao" rows="4"></textarea>
 
-        <label for="categoria">Caregoria</label>
+        <label for="categoria">Categoria</label>
         <input type="text" id="categoria" name="categoria" required>
 
         <button type="submit">Adicionar Receita</button>
     </form>
-
-
-    
-    <script src="/public/app.js"></script> 
 </body>
 </html>

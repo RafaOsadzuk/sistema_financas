@@ -33,12 +33,6 @@ if (isset($_POST['saldo'])) {
 $pdo = Database::getConn();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-<<<<<<< HEAD
- 
-    
-
-=======
->>>>>>> 9d4d51af36797b7bec97f05f2d12ac2110048dfa
     $saldo = new Saldo($_POST['saldo']);
     $saldoModel = new SaldoModel($saldo);
 

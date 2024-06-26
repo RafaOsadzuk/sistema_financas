@@ -2,20 +2,28 @@
 
 class Receita
 {
+    private string $id;
     private float $valor;
     private string $descricao;
     private string $data;
     private string $categoria;
 
-    public function __construct(float $valor,
+    public function __construct(string $id,
+                                float $valor,
                                 string $descricao,
                                 string $data,
                                 string $categoria)
     {
+        $this->id = $id;
         $this->valor = $valor;
         $this->descricao = $descricao;
         $this->data = $data;
-        $this->categoria;
+        $this->categoria = $categoria;
+    }
+
+    public function getId(): string
+    {
+        return $this->id;
     }
 
     public function getValor(): float

@@ -3,28 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/public/style.css">
     <title>Despesas</title>
 </head>
 <body>
     <header>
-        <h1>Adicione uma despesa:</h1>
+        <form action="/controllers/app.php" method="post" id="saldo">
+            <div class="dadosContainer">
+
+                <a href="index.html">
+                    <img src="/public/images/LogoHeader.png" alt="Logo">
+                </a>
+
+                <div class="dadosContent">
+                    <p>Nome: ADMIN</p>
+                    <br>
+
+                    <label for="saldo"> Saldo:</label>
+                    <input type="number" id="saldo" name="saldo">
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <h1 id="titulo">Adicione uma despesa</h1>
     </header>
 
-    <form action="/controllers/adicionaDespesa.php" method="post">
-        <label for="valor">Valor</label>
-        <input type="number" id="valor" name="valor" step="0.01" required>
+    <div class="flex-container">
+        <form  id="formReceita" action="/controllers/adicionaDespesa.php" method="post">
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" name="valor" step="0.01" required>
 
-        <label for="data">Data</label>
-        <input type="date" id="data" name="data" required>
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" required>
 
-        <label for="descricao">Descrição (opcional)</label>
-        <textarea id="descricao" name="descricao" rows="4"></textarea>
+            <label for="descricao">Descrição (opcional)</label>
+            <textarea id="descricao" name="descricao" rows="4"></textarea>
 
-        <label for="categoria">Caregoria</label>
-        <input type="text" id="categoria" name="categoria" required>
+            <label for="categoria">Caregoria</label>
+            <input type="text" id="categoria" name="categoria" required>
 
-        <input type="submit" value="Adicionar despesa">
-    </form>
-    
+            <input type="submit" value="Adicionar despesa">
+        </form>
+    </div>
 </body>
 </html>

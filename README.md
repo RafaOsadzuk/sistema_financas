@@ -3,6 +3,6 @@ sistema criado como projeto da faculdade cujo objetivo é gerir finanças pessoa
 Integrantes:
 João Barros Guatura da Costa - 22013545-2
 Rafael Souza Osadzuk - 22137934-2
-Raffael Guidetti Mielo -
+Raffael Guidetti Mielo - 22013508-2
 Vinicius Kawasugui Santiago - 22086055-2
 Leonardo Pedrozo -

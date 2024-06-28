@@ -7,7 +7,7 @@ Sistema criado como projeto da faculdade cujo objetivo é gerir finanças pessoa
 3. Rode o comando: `php -S localhost:8080` 
 
 ### INFORMAÇÕES E ADENDOS
-Algumas funções pararam de funcionar ao longo do caminho pois estavamos muito focados em fazer a conexão com o banco de dados, como por exemplo a função de imprimir o saldo inserido na tela HTML. Além de o botão "Editar" não fazer nada. Não existe criação ou cadastro de usuário nesse projeto, você já começa o aplicativo como "ADMIN".
+Algumas funções pararam de funcionar ao longo do caminho pois estavamos muito focados em fazer a conexão com o banco de dados, como por exemplo a função de imprimir o saldo inserido na tela HTML, entretanto o saldo está sendo enviado corretamento para o banco de dados, assim como as receitas e despesas. Além de o botão "Editar" não fazer nada. Não existe criação ou cadastro de usuário nesse projeto, você já começa o aplicativo como "ADMIN".
 
 Integrantes: <br>
 João Barros Guatura da Costa - 22013545-2<br>

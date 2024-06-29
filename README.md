@@ -14,4 +14,4 @@ João Barros Guatura da Costa - 22013545-2<br>
 Rafael Souza Osadzuk - 22137934-2<br>
 Raffael Guidetti Mielo - 22013508-2<br>
 Vinicius Kawasugui Santiago - 22086055-2<br>
-Leonardo Pedrozo -<br>
+Leonardo Pedrozo -22195334-2<br>
